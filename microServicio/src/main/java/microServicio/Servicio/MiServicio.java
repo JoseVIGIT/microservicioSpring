@@ -13,7 +13,7 @@ public class MiServicio {
 	public String mostrarMd5 (String id) {
 		
 		if (id == "") {
-			return ("Desde servicio: " + "Nada que convertir");	
+			return ("");	
 		}
 		try {
 	        MessageDigest md = MessageDigest.getInstance("MD5");
@@ -23,7 +23,7 @@ public class MiServicio {
 	        while (hashtext.length() < 32) {
 	            hashtext = "0" + hashtext;
 	        }
-	        return ("Desde servicio: " + hashtext);
+	        return (hashtext);
 	    }
 	    catch (NoSuchAlgorithmException e) {
 	        throw new RuntimeException(e);
